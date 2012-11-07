@@ -16,10 +16,10 @@ else: # assume windows
     from setup_windows import get_config
 
 metadata, options = get_config()
-if os.environ.get('library_dirs'):
-    options['library_dirs'].insert(0, os.environ['library_dirs'])
-if os.environ.get('include_dirs'):
-    options['include_dirs'].insert(0, os.environ['include_dirs'])
+if os.environ.get('LIBRARY_LIBS'):
+    options['library_dirs'].insert(0, os.environ['LIBRARY_LIBS'])
+if os.environ.get('INCLUDE_DIRS'):
+    options['include_dirs'].insert(0, os.environ['INCLUDE_DIRS'])
 
 metadata['ext_modules'] = [Extension(sources=['_mysql.c'], **options)]
 metadata['long_description'] = metadata['long_description'].replace(r'\n', '')
