@@ -16,8 +16,8 @@ else: # assume windows
     from setup_windows import get_config
 
 metadata, options = get_config()
-if os.environ.get('LIBRARY_LIBS'):
-    options['library_dirs'].insert(0, os.environ['LIBRARY_LIBS'])
+if os.environ.get('LIBRARY_DIRS'):
+    options['library_dirs'].insert(0, os.environ['LIBRARY_DIRS'])
 if os.environ.get('INCLUDE_DIRS'):
     options['include_dirs'].insert(0, os.environ['INCLUDE_DIRS'])
 
