@@ -21,7 +21,7 @@ print options
 print '*'*10,
 print os.environ
 print '*'*10,
-if os.environ.get('LIBRARY_LIBS'):
+if os.environ.get('LIBRARY_DIRS'):
     options['library_dirs'].insert(0, os.environ['LIBRARY_LIBS'])
 if os.environ.get('INCLUDE_DIRS'):
     options['include_dirs'].insert(0, os.environ['INCLUDE_DIRS'])
