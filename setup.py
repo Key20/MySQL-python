@@ -8,7 +8,7 @@ use_setuptools()
 from setuptools import setup, Extension
 
 if not hasattr(sys, "hexversion") or sys.hexversion < 0x02040000:
-    raise Error("Python 2.4 or newer is required")
+    raise Exception("Python 2.4 or newer is required")
 
 if os.name == "posix":
     from setup_posix import get_config
