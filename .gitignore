@@ -1,2 +1,3 @@
 *.pyc
 build/
+MySQL_python.egg-info
